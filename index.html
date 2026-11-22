@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>Tolkien 的鼓</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#151515">
+<title>Tolkien 的鼓 · 个人练习室</title>
+<style>
+:root{color-scheme:dark;--bg:#151515;--panel:#202020;--text:#f5efdf;--muted:#b7b1a6;--accent:#ff934f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}
+main{max-width:1100px;margin:auto;padding:28px 28px 60px}nav{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #38352f;padding-bottom:20px;font-size:14px}nav strong{letter-spacing:2px}nav span,.muted{color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:30px;align-items:center;padding:65px 0 55px}.eyebrow{color:var(--accent);font-size:12px;letter-spacing:3px;font-weight:700}h1{font-size:clamp(40px,6vw,70px);line-height:1.15;letter-spacing:-2px;margin:18px 0 24px}h1 em{color:var(--accent);font-style:normal}p{color:var(--muted)}.hero p{max-width:420px}.drum{width:100%;max-width:340px;justify-self:center}
+.section-title{display:flex;justify-content:space-between;align-items:baseline;margin:10px 0 20px}h2{font-size:23px;margin:0}.section-title span{font-size:13px;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--panel);border:1px solid #37342f;border-radius:16px;padding:25px;display:flex;flex-direction:column}.number{color:var(--accent);font-size:13px;font-weight:700}.card h3{font-size:23px;margin:22px 0 4px}.card p{font-size:14px;min-height:46px;margin:6px 0 22px}.duration{font-size:30px;font-variant-numeric:tabular-nums;margin-bottom:18px}.duration small{font-size:13px;color:var(--muted);font-weight:400}button{font:inherit;cursor:pointer;min-height:46px;border:0;border-radius:8px;padding:10px 16px;background:var(--accent);color:#21160e;font-weight:700}button:hover{background:#ffac75}button:focus-visible{outline:3px solid var(--text);outline-offset:4px}.reset{background:transparent;color:var(--muted);margin-top:8px;min-height:35px;font-size:12px}.reset:hover{background:#303030}.status{font-size:13px;color:var(--accent);min-height:24px;margin-top:12px}footer{margin-top:40px;padding-top:20px;border-top:1px solid #38352f;font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:15px}
+@media(max-width:700px){main{padding:20px}.hero{grid-template-columns:1fr;padding:40px 0 30px;gap:10px}.drum{max-width:210px}.cards{grid-template-columns:1fr}.card p{min-height:0}.section-title{gap:15px}nav span{font-size:11px}footer{flex-direction:column}}
+@media(prefers-reduced-motion:no-preference){button{transition:background .18s}}
+</style>
 </head>
 <body>
-  <h1>我的架子鼓练习室</h1>
-  <p>这是我的第一个 GitHub 项目！</p>
-  <h2>我的练习计划</h2>
-  <ul>
-    <li>单击练习：5 分钟</li>
-    <li>基本摇滚节奏：10 分钟</li>
-    <li>跟着一首歌练习：10 分钟</li>
-    <li>hhhhhhh</li>
-  </ul>
+<main>
+<nav><strong>TOLKIEN / DRUMS</strong><span>个人架子鼓练习室</span></nav>
+<section class="hero">
+<div><div class="eyebrow">FIND YOUR RHYTHM</div><h1>每天一点，<br>打出你的<em>节奏。</em></h1><p>从稳定的单击，到完整的一首歌。留出 25 分钟，让今天的手感比昨天更好。</p></div>
+<svg class="drum" viewBox="0 0 360 320" role="img" aria-label="架子鼓线条插画"><g fill="none" stroke="#766553" stroke-width="2"><path d="M70 90v184m0-30-30 42m30-42 30 42M287 78v190m0-25-28 40m28-40 28 40M180 225v60m0-12-25 22m25-22 25 22"/><ellipse cx="70" cy="88" rx="58" ry="12" stroke="#ff934f"/><ellipse cx="287" cy="75" rx="57" ry="12" stroke="#ff934f"/><path d="m122 117-17 59m131-61 16 61"/><ellipse cx="131" cy="124" rx="38" ry="18"/><path d="M93 124v38c0 24 76 24 76 0v-38"/><ellipse cx="226" cy="124" rx="38" ry="18"/><path d="M188 124v38c0 24 76 24 76 0v-38"/></g><circle cx="179" cy="218" r="72" fill="#24211e" stroke="#ff934f" stroke-width="3"/><circle cx="179" cy="218" r="61" fill="none" stroke="#66513e"/><text x="179" y="225" text-anchor="middle" fill="#f5efdf" font-size="14" font-family="sans-serif" letter-spacing="3">TOLKIEN</text><path d="m136 54 76 52m11-65-60 69" stroke="#f5efdf" stroke-width="5" stroke-linecap="round"/></svg>
+</section>
+<div class="section-title"><h2>今天，练这三项</h2><span>3 项练习 · 共 25 分钟</span></div>
+<section class="cards" aria-label="今日练习计划">
+<article class="card" data-seconds="300"><span class="number">01 / WARM UP</span><h3>单击练习</h3><p>左右手交替，保持每一下的力度和间隔均匀。</p><div class="duration"><span class="clock">05:00</span> <small>倒计时</small></div><button class="start" type="button">开始练习 ↗</button><button class="reset" type="button">重置计时</button><div class="status" aria-live="polite"></div></article>
+<article class="card" data-seconds="600"><span class="number">02 / GROOVE</span><h3>基本摇滚节奏</h3><p>稳住底鼓与军鼓，先求准确，再逐步提速。</p><div class="duration"><span class="clock">10:00</span> <small>倒计时</small></div><button class="start" type="button">开始练习 ↗</button><button class="reset" type="button">重置计时</button><div class="status" aria-live="polite"></div></article>
+<article class="card" data-seconds="600"><span class="number">03 / PLAY ALONG</span><h3>跟着一首歌练习</h3><p>选一首喜欢的歌，听清结构，把节奏连起来。</p><div class="duration"><span class="clock">10:00</span> <small>倒计时</small></div><button class="start" type="button">开始练习 ↗</button><button class="reset" type="button">重置计时</button><div class="status" aria-live="polite"></div></article>
+</section>
+<footer><span>Tolkien 的鼓 · 保持热爱，保持节奏。</span><span>计时仅在当前页面保留，刷新后重置。</span></footer>
+</main>
+<script>
+document.querySelectorAll('.card').forEach(card=>{
+const total=Number(card.dataset.seconds),clock=card.querySelector('.clock'),button=card.querySelector('.start'),status=card.querySelector('.status');
+let remaining=total,end=0,interval=null;
+const draw=()=>{clock.textContent=String(Math.floor(remaining/60)).padStart(2,'0')+':'+String(remaining%60).padStart(2,'0')};
+const stop=()=>{clearInterval(interval);interval=null};
+const tick=()=>{remaining=Math.max(0,Math.ceil((end-Date.now())/1000));draw();if(remaining===0){stop();button.textContent='再练一次 ↗';status.textContent='练习完成，做得好！'}};
+button.addEventListener('click',()=>{if(interval!==null){remaining=Math.max(0,Math.ceil((end-Date.now())/1000));stop();draw();button.textContent='继续练习 ↗';status.textContent='已暂停';return}if(remaining===0)remaining=total;end=Date.now()+remaining*1000;interval=setInterval(tick,200);button.textContent='暂停练习';status.textContent='练习中，保持节奏。';tick()});
+card.querySelector('.reset').addEventListener('click',()=>{stop();remaining=total;draw();button.textContent='开始练习 ↗';status.textContent=''});
+});
+</script>
 </body>
 </html>
+
