@@ -1,0 +1,30 @@
+/* 背景独立成层，不挡住文字和按钮。 */
+body {
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 20% 30%, #ff934f24, transparent 55%),
+    radial-gradient(ellipse at 80% 70%, #ff934f12, transparent 50%);
+  transform: scale(1.15);
+  animation: drift 20s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+  to {
+    transform: translate(3%, -3%) scale(1.25);
+  }
+}
+
+/* 尊重系统的“减少动态效果”设置。 */
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+  }
+}
