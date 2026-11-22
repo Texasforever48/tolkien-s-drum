@@ -1,62 +1,30 @@
-/* Tolkien 的鼓 · 练习室 */
-* {
-  box-sizing: border-box;
-}
-
+/* 背景独立成层，不挡住文字和按钮。 */
 body {
-  max-width: 860px;
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 64px 24px;
-  background: #101714;
-  color: #ece9df;
-  font-family: system-ui, "PingFang SC", sans-serif;
-  line-height: 1.8;
+  isolation: isolate;
 }
 
-h1 {
-  margin-bottom: 12px;
-  color: #dfbd77;
-  font-size: clamp(30px, 6vw, 48px);
-  letter-spacing: 2px;
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 20% 30%, #ff934f24, transparent 55%),
+    radial-gradient(ellipse at 80% 70%, #ff934f12, transparent 50%);
+  transform: scale(1.15);
+  animation: drift 20s ease-in-out infinite alternate;
 }
 
-p {
-  color: #a9b8ad;
-}
-
-h2 {
-  margin-top: 48px;
-  font-size: 22px;
-}
-
-ul {
-  display: grid;
-  gap: 16px;
-  padding: 0;
-  list-style: none;
-}
-
-li {
-  padding: 20px 24px;
-  background: #1b2922;
-  border: 1px solid #354b3d;
-  border-left: 4px solid #dfbd77;
-  border-radius: 12px;
-  transition: background 0.2s, transform 0.2s;
-}
-
-li:hover {
-  background: #25382d;
-  transform: translateY(-3px);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  li {
-    transition: none;
+@keyframes drift {
+  to {
+    transform: translate(3%, -3%) scale(1.25);
   }
+}
 
-  li:hover {
-    transform: none;
+/* 尊重系统的“减少动态效果”设置。 */
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
   }
 }
